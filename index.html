@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & META TAGS (High Priority) -->
+    <title>Kykstart - Give Your Idea a Chance</title>
+    <meta name="description" content="Turn your startup idea into a real, low-risk experiment. Kykstart provides a market report, a professional landing page, and a guided outreach plan for just $299.">
+    
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.kykstart.com/"> <!-- Replace with your actual domain -->
+    <meta property="og:title" content="Kykstart - That Idea You Can't Stop Thinking About?">
+    <meta property="og:description" content="Turn your startup idea into a real, low-risk experiment. Kykstart provides a market report, a professional landing page, and a guided outreach plan for just $299.">
+    <meta property="og:image" content="https://placehold.co/1200x630/0A2540/FFFFFF?text=Kykstart"> <!-- Replace with a real preview image -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.kykstart.com/"> <!-- Replace with your actual domain -->
+    <meta property="twitter:title" content="Kykstart - That Idea You Can't Stop Thinking About?">
+    <meta property="twitter:description" content="Turn your startup idea into a real, low-risk experiment. Kykstart provides a market report, a professional landing page, and a guided outreach plan for just $299.">
+    <meta property="twitter:image" content="https://placehold.co/1200x630/0A2540/FFFFFF?text=Kykstart"> <!-- Replace with a real preview image -->
+
+    <!-- PERFORMANCE & FONT OPTIMIZATION -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    
+    <style>
+        /* CSS styles from previous steps remain the same */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        :root {
+            --color-primary: #0A2540; /* Dark Navy Blue */
+            --color-secondary: #F6F9FC; /* Light Grey Background */
+            --color-text: #425466; /* Slate Grey */
+            --color-heading: #0A2540;
+            --color-accent: #00C49A; /* Vibrant Green for CTAs */
+            --color-white: #FFFFFF;
+            --border-radius: 8px;
+        }
+
+        /* --- Global Reset & Base Styles --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--color-text);
+            background-color: var(--color-white);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* --- Layout & Containers --- */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-colored {
+            background-color: var(--color-secondary);
+        }
+
+        /* --- Typography --- */
+        h1, h2, h3 {
+            color: var(--color-heading);
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 20px;
+        }
+        h1 { font-size: 48px; }
+        h2 { font-size: 36px; text-align: center; }
+        h3 { font-size: 22px; }
+        
+        p { margin-bottom: 20px; }
+        .text-center { text-align: center; }
+        .sub-headline {
+            font-size: 22px;
+            max-width: 600px;
+            margin: 20px auto 30px auto;
+            color: var(--color-text);
+            line-height: 1.6;
+        }
+
+        /* --- CTA Button --- */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            font-size: 18px;
+            font-weight: 600;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(0,0,0,0.1);
+        }
+        
+        /* --- Header --- */
+        .header {
+            padding: 20px 0;
+            border-bottom: 1px solid #E6E6E6;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+        .header .cta-button {
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+
+        /* --- Hero Section --- */
+        .hero { padding: 100px 0; text-align: center; background-color: var(--color-white); }
+        .hero-sub-headline {
+             font-size: 22px;
+             max-width: 650px;
+             margin: 20px auto 30px auto;
+             color: var(--color-text);
+             line-height: 1.5;
+        }
+
+        /* --- "Sound Familiar?" Section --- */
+        .familiar-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 60px;
+        }
+        .familiar-card {
+            background-color: var(--color-white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .familiar-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+        .familiar-card .material-icons-outlined {
+            font-size: 40px;
+            color: var(--color-accent);
+            margin-bottom: 15px;
+        }
+        .familiar-card h3 {
+            margin-bottom: 10px;
+        }
+        .familiar-card p {
+            margin-bottom: 0;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* --- "How It Works" Section --- */
+        .steps-container {
+            position: relative;
+            max-width: 650px;
+            margin: 60px auto 0 auto;
+            padding-left: 70px;
+        }
+        .steps-container::before {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background-color: #E6E6E6;
+        }
+        .step { position: relative; margin-bottom: 50px; }
+        .step:last-child { margin-bottom: 0; }
+        .step h3 { font-size: 24px; }
+        .step-number {
+            position: absolute;
+            left: -70px;
+            top: -5px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            font-size: 24px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 3px solid var(--color-white);
+            z-index: 1;
+        }
+        
+        /* --- Founder Section --- */
+        .founder-section { background-color: var(--color-primary); color: var(--color-white); }
+        .founder-section h2,.founder-section h3 { color: var(--color-white); font-size: 24px; }
+        .founder-content { display: flex; align-items: center; gap: 40px; margin-top: 40px; }
+        .founder-photo { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 4px solid var(--color-accent); }
+        .founder-bio p { color: #BDD4E7; }
+        .founder-bio p:last-child { margin-bottom: 0; }
+
+        /* --- Social Proof / Community Section --- */
+        .social-proof h2 {
+            margin-bottom: 10px;
+        }
+        .community-sub-headline {
+            font-size: 18px;
+            max-width: 550px;
+            margin: 0 auto 40px auto;
+            color: var(--color-text);
+        }
+        .logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+        .logo-box {
+            background-color: #F6F9FC;
+            color: #8898AA;
+            border: 1px solid #E6E6E6;
+            border-radius: var(--border-radius);
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: 600;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+        .logo-box:hover {
+            background-color: #E6E6E6;
+            color: var(--color-heading);
+        }
+
+        /* --- Pricing Section --- */
+        .pricing-box {
+            max-width: 550px;
+            margin: 40px auto 0 auto;
+            background: var(--color-white);
+            border: 1px solid #E6E6E6;
+            border-radius: var(--border-radius);
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+        }
+        .pricing-box h3 { margin-top: 0; font-size: 24px; }
+        .price { font-size: 52px; font-weight: 700; color: var(--color-primary); margin: 10px 0; }
+        .price-note { font-size: 16px; color: var(--color-text); margin-bottom: 30px; }
+        .features-list { list-style: none; text-align: left; margin-bottom: 40px; }
+        .features-list li { margin-bottom: 25px; display: flex; align-items: flex-start; gap: 15px; }
+        .features-list li:last-child { margin-bottom: 0; }
+        .feature-icon { flex-shrink: 0; color: var(--color-accent); margin-top: 3px; }
+        .feature-text strong { display: block; font-weight: 600; color: var(--color-heading); margin-bottom: 2px; }
+        .feature-text p { font-size: 16px; line-height: 1.6; margin: 0; color: var(--color-text); }
+
+        /* --- Final CTA Section --- */
+        .final-cta { background-color: var(--color-primary); color: var(--color-white); }
+        .final-cta h2 { color: var(--color-white); }
+        .final-cta .sub-headline { color: #BDD4E7; }
+
+        /* --- Footer --- */
+        .footer { padding: 40px 0; text-align: center; font-size: 14px; color: #8898AA; line-height: 1.8; }
+        .footer p { margin-bottom: 10px; }
+        .footer-links {
+            margin-top: 10px;
+        }
+        .footer a { color: #8898AA; text-decoration: none; transition: color 0.2s ease; }
+        .footer a:hover { color: var(--color-accent); }
+        .footer span { margin: 0 5px; }
+
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 38px; }
+            h2 { font-size: 30px; }
+            h3 { font-size: 20px; }
+            .sub-headline, .hero-sub-headline { font-size: 18px; }
+
+            .familiar-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .founder-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .logos {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo" aria-label="Kykstart Homepage">Kykstart</a>
+                <a href="#pricing" class="cta-button">View The Package</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>That Idea You Can't Stop Thinking About?</h1>
+                <div class="hero-sub-headline">
+                    Let's turn it into a real experiment in about a weekend. <br>
+                    No code, no risk, no quitting your day job.
+                </div>
+                <a href="https://buy.stripe.com/00wfZh9cHcLC6eFaKe3Ru01" class="cta-button">Give Your Idea a Real Shot</a>
+            </div>
+        </section>
+
+        <section id="problem" class="section section-colored">
+            <div class="container">
+                <h2>Sound Familiar?</h2>
+                <div class="familiar-grid">
+                    <div class="familiar-card">
+                        <span class="material-icons-outlined">lightbulb_circle</span>
+                        <h3>Endless Ideas, Zero Progress?</h3>
+                        <p>Is your notebook filled with brilliant concepts that never see the light of day?</p>
+                    </div>
+                    <div class="familiar-card">
+                        <span class="material-icons-outlined">code_off</span>
+                        <h3>Feeling Stuck Without Code?</h3>
+                        <p>Do you see a clear problem you can solve, but feel frustrated and blocked by the technical barrier?</p>
+                    </div>
+                    <div class="familiar-card">
+                        <span class="material-icons-outlined">loop</span>
+                        <h3>Trapped in the 9-to-5 Grind?</h3>
+                        <p>Are you tired of building someone else's dream and craving the freedom and impact of your own?</p>
+                    </div>
+                    <div class="familiar-card">
+                        <span class="material-icons-outlined">menu_book</span>
+                        <h3>Stuck in "Analysis Paralysis"?</h3>
+                        <p>Have you spent months learning and planning, only to feel like you're still not "ready" to take the first real step?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solution" class="section">
+            <div class="container">
+                <h2 class="text-center">From Idea to Insight in 3 Simple Steps</h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>First, We Stress-Test Your Idea.</h3>
+                        <p>Before you invest time or money, we answer the most critical question: "Is this a problem people would actually pay to solve?" We dive deep into the market, map out your potential competitors, and define your ideal first customer, giving you a clear "go" or "no-go" signal based on honest data.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Then, We Build Your Digital Storefront.</h3>
+                        <p>With a validated idea, we build a professional landing page that makes you look established from day one. Our copywriters craft a compelling message, and our design ensures your value is communicated clearly, funneling visitors toward the all-important signup button.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Finally, We Kickstart Your Momentum.</h3>
+                        <p>A website is useless without visitors. We don't just hand you a page and wish you luck. We create a personalized launch plan showing you exactly where to find your first potential users online and guide you on how to approach them, turning your new website into a real experiment.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section founder-section">
+            <div class="container">
+                <div class="founder-content">
+                    <img src="https://placehold.co/150x150/00C49A/0A2540?text=AY" alt="Abhishek Yadav, Founder of Kykstart" class="founder-photo">
+                    <div class="founder-bio">
+                        <h3>A note from the founder</h3>
+                        <p>Hi, I'm Abhishek Yadav. For years, I was a product manager with a notebook full of ideas I was too scared to act on. I was stuck in the "what if" phase, paralyzed by the risk and complexity. I built Kykstart to be the service I wish I had back then—a simple, affordable, low-risk first step to get real data instead of just daydreaming.</p>
+                        <p>My passion is helping talented professionals like you bridge the gap between idea and action. Let's get your idea out of the notebook and into the world.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section social-proof">
+            <div class="container text-center">
+                <h2>Built For The Modern Startup Community</h2>
+                <p class="community-sub-headline">Kykstart was created with the principles and conversations from communities like these in mind.</p>
+                <div class="logos">
+                    <div class="logo-box">Hacker News</div>
+                    <div class="logo-box">Indie Hackers</div>
+                    <div class="logo-box">r/startups</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="section section-colored">
+            <div class="container">
+                <h2 class="text-center">Your Permission Slip to Start</h2>
+                <div class="pricing-box">
+                    <h3>The "First Spark" Package</h3>
+                    <div class="price">$299</div>
+                    <div class="price-note">One-time fee. No subscriptions, no hidden costs.</div>
+                    <ul class="features-list">
+                        <li>
+                            <span class="material-icons-outlined feature-icon">bar_chart</span>
+                            <div class="feature-text">
+                                <strong>Comprehensive Market Viability Report</strong>
+                                <p>A detailed PDF report including competitive analysis, an ideal customer profile, and our data-backed recommendation on the idea's potential.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons-outlined feature-icon">article</span>
+                            <div class="feature-text">
+                                <strong>High-Conversion Landing Page</strong>
+                                <p>A single-page website built with a custom design, persuasive direct-response copy, and integrated email capture to build your waitlist.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="material-icons-outlined feature-icon">rocket_launch</span>
+                            <div class="feature-text">
+                                <strong>Guided 'First Push' Launch Plan</strong>
+                                <p>Your playbook for getting traction, including a targeted list of online communities, personalized outreach scripts, and a step-by-step video guide.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="https://buy.stripe.com/00wfZh9cHcLC6eFaKe3Ru01" class="cta-button">Start Your Validation</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section final-cta text-center">
+            <div class="container">
+                <h2>Your idea is worth more than a daydream.</h2>
+                <p class="sub-headline">Give it a chance to become something real. You're 10 minutes away from starting. The project brief is that simple.</p>
+                <a href="#pricing" class="cta-button">Get Your Permission Slip</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Kykstart, a Nuosoft LLC brand. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Terms of Service</a>
+                <span>|</span>
+                <a href="#">Privacy Policy</a>
+                <span>|</span>
+                <a href="#">FAQ</a>
+                <span>|</span>
+                <a href="mailto:hello@kykstart.com">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
