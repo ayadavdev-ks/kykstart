@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kykstart - Brief Received</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        :root {
+            --color-primary: #0A2540;
+            --color-secondary: #F6F9FC;
+            --color-text: #425466;
+            --color-heading: #0A2540;
+            --color-accent: #00C49A;
+            --color-white: #FFFFFF;
+            --border-radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: 18px;
+            line-height: 1.7;
+            color: var(--color-text);
+            background-color: var(--color-secondary);
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            background-color: var(--color-white);
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            text-align: center; /* This centers all content by default */
+        }
+
+        .icon-image {
+            width: 64px; /* We control the size here */
+            height: 64px;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: var(--color-heading);
+            font-size: 32px;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .confirmation-message {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .next-steps-section {
+            background-color: var(--color-secondary);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .next-steps-section h2 {
+            font-size: 20px;
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: var(--color-heading);
+        }
+
+        .next-steps-section p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+        
+        .next-steps-section strong {
+            font-weight: 600;
+        }
+
+        .closing-message {
+            font-size: 16px;
+            color: #8898AA;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- The self-contained SVG icon URL from our previous step -->
+        <img src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='%2300C49A'%3e%3cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3e%3c/svg%3e" alt="Success Checkmark" class="icon-image">
+        
+        <h1>Thank You! Your Brief is Submitted.</h1>
+        <p class="confirmation-message">The Kykstart team is now reviewing the information you provided. You have successfully completed the onboarding process.</p>
+
+        <div class="next-steps-section">
+            <h2>What Happens Next?</h2>
+            <p>You will receive a <strong>personal confirmation email</strong> from <strong>hello@kykstart.com</strong> within <strong>1-2 business days</strong>. This email will contain the link to your dedicated Kykstart Project Portal.</p>
+            <hr style="border: none; border-top: 1px solid #E6E6E6; margin: 20px 0;">
+            <p><strong>Have more to share?</strong> If you have any additional files like notes or mockups, you can add them directly to the Project Portal once you receive the link.</p>
+        </div>
+        
+        <p class="closing-message">You can now safely close this page.</p>
+
+    </div>
+
+</body>
+</html>
+
