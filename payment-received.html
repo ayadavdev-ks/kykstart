@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kykstart - Payment Confirmed</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+        :root {
+            --color-primary: #0A2540;
+            --color-secondary: #F6F9FC;
+            --color-text: #425466;
+            --color-heading: #0A2540;
+            --color-accent: #00C49A;
+            --color-white: #FFFFFF;
+            --border-radius: 8px;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-secondary);
+            -webkit-font-smoothing: antialiased;
+            display: flex;
+            flex-direction: column; /* Allow footer to sit below the main container */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            background-color: var(--color-white);
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .icon-image { width: 64px; height: 64px; margin-bottom: 15px; }
+        h1 { color: var(--color-heading); font-size: 32px; line-height: 1.2; margin-top: 0; margin-bottom: 10px; }
+        .confirmation-message { font-size: 18px; margin-bottom: 30px; }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--color-accent);
+            color: var(--color-white);
+            font-size: 18px;
+            font-weight: 600;
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .cta-button:hover { transform: translateY(-2px); box-shadow: 0 7px 14px rgba(0,0,0,0.1); }
+        
+        .sub-text { font-size: 16px; color: #8898AA; }
+        
+        .footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #8898AA;
+            text-align: center;
+        }
+        .footer a { color: #8898AA; text-decoration: underline; }
+        .footer a:hover { color: var(--color-primary); }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <img src="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='%2300C49A'%3e%3cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z'/%3e%3c/svg%3e" alt="Success Checkmark" class="icon-image">
+        
+        <h1>Success! Your Order is Confirmed.</h1>
+        <p class="confirmation-message">You've just taken the most important step. Let's continue.</p>
+
+        <a href="#" id="tallyButton" class="cta-button">Begin Your Project Brief</a>
+        
+        <p class="sub-text">
+            For your records, a welcome email with this same link is also on its way to your inbox.
+        </p>
+
+    </div>
+
+    <footer class="footer">
+        <p>Having trouble? You can reach us at <a href="mailto:support@kykstart.com">support@kykstart.com</a></p>
+    </footer>
+
+    <script>
+        window.onload = function() {
+            const tallyButton = document.getElementById('tallyButton');
+            const urlParams = new URLSearchParams(window.location.search);
+            const stripePaymentID = urlParams.get('stripePaymentID');
+            const baseTallyUrl = 'https://tally.so/r/wg2Qv4';
+
+            if (stripePaymentID) {
+                const uniqueTallyUrl = `${baseTallyUrl}?stripePaymentID=${stripePaymentID}`;
+                tallyButton.href = uniqueTallyUrl;
+            } else {
+                tallyButton.href = baseTallyUrl;
+                console.warn('Stripe Payment ID not found in URL.');
+            }
+        };
+    </script>
+
+</body>
+</html>
+
