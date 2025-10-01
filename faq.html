@@ -59,9 +59,30 @@
             color: var(--color-heading);
             font-size: 32px;
             font-weight: 700;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
             text-align: center;
         }
+
+        /* --- NEW STYLES FOR THE TOGGLE BUTTON --- */
+        .faq-controls {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        #toggleAllBtn {
+            background: none;
+            border: none;
+            color: var(--color-accent);
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 5px;
+        }
+        #toggleAllBtn:hover {
+            text-decoration: underline;
+        }
+        /* --- END OF NEW STYLES --- */
+
 
         .faq-item {
             border-bottom: 1px solid var(--border-color);
@@ -103,9 +124,23 @@
             padding-bottom: 20px;
         }
 
-        .faq-answer ul {
-            list-style-position: inside;
-            padding-left: 0;
+        .faq-answer > ul {
+            list-style-type: none;
+            padding-left: 5px;
+        }
+
+        .faq-answer li {
+            margin-bottom: 15px;
+        }
+
+        .faq-answer ul ul {
+            list-style-type: disc;
+            margin-top: 15px;
+            padding-left: 25px;
+        }
+        
+        .faq-answer ul ul li {
+            margin-bottom: 10px;
         }
         
         .faq-answer a {
@@ -136,6 +171,11 @@
 
     <div class="container">
         <h1 class="page-title">Frequently Asked Questions</h1>
+        
+        <!-- NEW EXPAND/COLLAPSE BUTTON -->
+        <div class="faq-controls">
+            <button id="toggleAllBtn">Expand All</button>
+        </div>
 
         <div class="faq-category">
             
@@ -211,7 +251,10 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const faqItems = document.querySelectorAll('.faq-item');
+            const toggleAllBtn = document.getElementById('toggleAllBtn');
+            let allExpanded = false;
 
+            // Individual item toggle
             faqItems.forEach(item => {
                 const question = item.querySelector('.faq-question');
                 const answer = item.querySelector('.faq-answer');
@@ -219,15 +262,6 @@
                 question.addEventListener('click', () => {
                     const isActive = item.classList.contains('active');
                     
-                    // Close all other items
-                    faqItems.forEach(otherItem => {
-                        if (otherItem !== item) {
-                            otherItem.classList.remove('active');
-                            otherItem.querySelector('.faq-answer').style.maxHeight = 0;
-                        }
-                    });
-                    
-                    // Toggle the clicked item
                     if (!isActive) {
                         item.classList.add('active');
                         answer.style.maxHeight = answer.scrollHeight + 'px';
@@ -236,6 +270,24 @@
                         answer.style.maxHeight = 0;
                     }
                 });
+            });
+
+            // Expand/Collapse All functionality
+            toggleAllBtn.addEventListener('click', () => {
+                allExpanded = !allExpanded; // Flip the state
+
+                faqItems.forEach(item => {
+                    const answer = item.querySelector('.faq-answer');
+                    if (allExpanded) {
+                        item.classList.add('active');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    } else {
+                        item.classList.remove('active');
+                        answer.style.maxHeight = 0;
+                    }
+                });
+
+                toggleAllBtn.textContent = allExpanded ? 'Collapse All' : 'Expand All';
             });
         });
     </script>
