@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Kykstart</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        :root {
+            --color-primary: #0A2540;
+            --color-secondary: #F6F9FC;
+            --color-text: #425466;
+            --color-heading: #0A2540;
+            --color-accent: #00CA9A;
+            --color-white: #FFFFFF;
+            --border-radius: 8px;
+            --border-color: #E6E6E6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--color-text);
+            background-color: var(--color-secondary);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .header {
+            background-color: var(--color-primary);
+            color: var(--color-white);
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: var(--color-white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            padding: 40px;
+        }
+        
+        .page-title {
+            color: var(--color-heading);
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--color-heading);
+            padding: 20px 0;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            color: var(--color-accent);
+            transition: transform 0.2s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+        
+        .faq-answer p, .faq-answer ul {
+            padding-bottom: 20px;
+        }
+
+        .faq-answer ul {
+            list-style-position: inside;
+            padding-left: 0;
+        }
+        
+        .faq-answer a {
+            color: var(--color-accent);
+            font-weight: 500;
+            text-decoration: none;
+        }
+        .faq-answer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 20px 10px;
+                padding: 25px;
+            }
+            .page-title { font-size: 26px; }
+            .faq-question { font-size: 16px; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Kykstart</h1>
+    </header>
+
+    <div class="container">
+        <h1 class="page-title">Frequently Asked Questions</h1>
+
+        <div class="faq-category">
+            
+            <div class="faq-item">
+                <button class="faq-question">What exactly do I get with the "First Spark" package?</button>
+                <div class="faq-answer">
+                    <p>You receive three core deliverables: 1) A professional Market Insight Report that validates your idea and identifies your ideal first customer. 2) A custom, single-page "Digital Storefront" landing page with persuasive copy, designed to capture initial signups. 3) A "First Push" Guided Outreach Plan, which is a mini-playbook on how to find your first 5-10 users in specific online communities.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">What is the typical turnaround time?</button>
+                <div class="faq-answer">
+                    <p>Our process is designed for speed. After you submit your project brief, you can expect to receive the first draft of your Market Insight Report within 3-5 business days. Once that's finalized, the landing page draft follows within another 3-5 business days. The entire process typically takes about two weeks.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">What happens if the market research is negative ("Caution" or "Re-evaluate")?</button>
+                <div class="faq-answer">
+                    <p>This is a fantastic question and a core part of our value. If the research indicates your initial idea is risky, we don't just build a landing page for it. The project automatically enters our "Pivot & Refine" phase. This includes a 45-minute "Second Spark" strategy session with you to collaboratively refine your idea into a more viable direction. This is included in the package price.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Do I need to buy a domain name or hosting for the landing page?</button>
+                <div class="faq-answer">
+                    <p>A professional domain name is essential, and our package is designed to guide you to the perfect choice without the stress.</p>
+                    <ul>
+                        <li><strong>1. The Domain Strategy Guide:</strong> Finding a great name is a challenge. As part of your Market Insight Report, we provide a Domain Strategy Guide that gives you two clear paths:
+                            <ul>
+                                <li><strong>The Standard Path (Fully Covered):</strong> We'll help you find a great name using modern, professional extensions like `.co`, `.app`, or `.dev`. Our **$20 reimbursement is designed to fully cover the first-year cost** of these standard domains.</li>
+                                <li><strong>The Premium Path (Partially Covered):</strong> For brands in specific fields like artificial intelligence or technology, premium extensions like `.ai` or `.io` can be a powerful choice. These are a larger investment (often $70+ per year). Our **$20 reimbursement still serves as a great starting contribution** towards your investment should you choose this path.</li>
+                            </ul>
+                        </li>
+                        <li><strong>2. Guided Purchase & Reimbursement:</strong> Once you find a name you love, our video guide will walk you through purchasing it. You will be the sole owner from day one. Simply forward us the receipt to claim your reimbursement.</li>
+                        <li><strong>3. The "Concierge" Connection:</strong> You will grant us secure, temporary "delegate access." **We will then handle all the complex DNS configuration for you.**</li>
+                    </ul>
+                </div>
+            </div>
+
+             <div class="faq-item">
+                <button class="faq-question">Who owns the final landing page and the report?</button>
+                <div class="faq-answer">
+                    <p>You do. 100%. Once the project is complete, we transfer full ownership of the Google Drive Project Portal, which contains the Market Insight Report, the outreach plan, and all the HTML/CSS code for your landing page. They are your assets to use and build upon as you see fit.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Is the $299 fee really a one-time payment?</button>
+                <div class="faq-answer">
+                    <p>Yes. It is a single, one-time fee for the complete "First Spark" package. There are no subscriptions, hidden costs, or recurring charges from us. Any future costs, like a custom domain name or web hosting, would be paid by you directly to those third-party providers, though we do reimburse up to $20 for your first year's domain registration.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">What if I want changes to the landing page design?</button>
+                <div class="faq-answer">
+                    <p>Our process is collaborative. The package includes one round of revisions on the landing page draft. You'll be able to provide feedback on the copy, messaging, and overall design to ensure it perfectly matches your vision before we finalize the files for you.</p>
+                </div>
+            </div>
+            
+             <div class="faq-item">
+                <button class="faq-question">What information do I need to provide to get started?</button>
+                <div class="faq-answer">
+                    <p>After you purchase the package, you'll be directed to our simple, conversational project brief form. It asks a few key questions about the story behind your idea, the problem you're solving, and who you're solving it for. It's designed to be completed in under 10 minutes and doesn't require any technical jargon.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.faq-answer').style.maxHeight = 0;
+                        }
+                    });
+                    
+                    // Toggle the clicked item
+                    if (!isActive) {
+                        item.classList.add('active');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    } else {
+                        item.classList.remove('active');
+                        answer.style.maxHeight = 0;
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+
